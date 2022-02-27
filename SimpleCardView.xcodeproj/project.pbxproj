@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E154FCB32737FF090072A58A /* CardPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E154FCB22737FF090072A58A /* CardPicker.swift */; };
 		E154FCF427399E6F0072A58A /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = E154FCF327399E6F0072A58A /* Card.swift */; };
 		E1759AF22737ABA8009F20FE /* SimpleCardViewApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1759AF12737ABA8009F20FE /* SimpleCardViewApp.swift */; };
 		E1759AF42737ABA8009F20FE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1759AF32737ABA8009F20FE /* ContentView.swift */; };
@@ -17,7 +16,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		E154FCB22737FF090072A58A /* CardPicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardPicker.swift; sourceTree = "<group>"; };
 		E154FCF327399E6F0072A58A /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		E1759AEE2737ABA8009F20FE /* SimpleCardView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleCardView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1759AF12737ABA8009F20FE /* SimpleCardViewApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleCardViewApp.swift; sourceTree = "<group>"; };
@@ -60,7 +58,6 @@
 				E1759AF12737ABA8009F20FE /* SimpleCardViewApp.swift */,
 				E1759AF32737ABA8009F20FE /* ContentView.swift */,
 				E1759AFF2737ABF6009F20FE /* CardView.swift */,
-				E154FCB22737FF090072A58A /* CardPicker.swift */,
 				E154FCF327399E6F0072A58A /* Card.swift */,
 				E1759AF52737ABA9009F20FE /* Assets.xcassets */,
 				E1759AF72737ABA9009F20FE /* Preview Content */,
@@ -150,7 +147,6 @@
 				E1759B002737ABF6009F20FE /* CardView.swift in Sources */,
 				E154FCF427399E6F0072A58A /* Card.swift in Sources */,
 				E1759AF22737ABA8009F20FE /* SimpleCardViewApp.swift in Sources */,
-				E154FCB32737FF090072A58A /* CardPicker.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
