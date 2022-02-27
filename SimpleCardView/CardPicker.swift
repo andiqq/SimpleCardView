@@ -21,18 +21,9 @@ struct CardPicker
         var pickedCards: [Card] = []
         
         for _ in 0..<NumberOfCards {
-            pickedCards.append(Card(id: pickedCards.count, value: RandomValue(), suit: RandomSuit()))
+            pickedCards.append(Card(id: pickedCards.count, value: .allCases.randomElement()!, suit: .allCases.randomElement()!))
         }
         return pickedCards
     }
-    
-    private static func RandomSuit() -> Card.Suit {
-        Card.Suit.allCases.randomElement()!
-    }
-    
-    private static func RandomValue() -> Card.Value {
-        Card.Value.allCases.randomElement()!
-    }
-    
 }
 

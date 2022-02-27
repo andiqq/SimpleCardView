@@ -33,7 +33,6 @@ struct Card: Identifiable {
     }
     
     var id: Int
-    // var value: String
     var value: Value
     var suit: Suit
 }

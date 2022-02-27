@@ -51,6 +51,6 @@ struct CardView: View {
 
 struct Card_Previews: PreviewProvider {
     static var previews: some View {
-        CardView(card: Card(id: 0, value: Card.Value.Q, suit: .hearts))
+        CardView(card: Card(id: 0, value: .Q, suit: .hearts))
     }
 }
