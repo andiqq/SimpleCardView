@@ -16,23 +16,23 @@ struct CardView: View {
             ZStack {
                 RoundedRectangle(cornerRadius: 10)
                     .foregroundColor(.white)
-                    
+                                        
                 RoundedRectangle(cornerRadius: 10)
                     .stroke(lineWidth: 3)
                 
-                Text(card.suit)
+                Text(card.suit.rawValue)
                     .font(.system(size: geometry.size.width * 0.7))
                     .padding(.top, geometry.size.width / 20 )
                     
                     
                 VStack {
                     HStack {
-                        Text(card.value)
+                        Text(card.value.rawValue + " ")
                             .font(Font.custom("Baskerville", size: geometry.size.width * 0.36))
                             .fontWeight(.medium)
                             .padding(.horizontal, geometry.size.width / 24)
                             .foregroundColor(
-                                ( ["♦️", "♥️"].contains(card.suit) ) ?
+                                ( card.suit == .hearts || card.suit == .diamonds) ?
                                 Color(hue: 1.0, saturation: 1.0, brightness: 0.884) : .black)
                             
                         Spacer()
@@ -51,6 +51,6 @@ struct CardView: View {
 
 struct Card_Previews: PreviewProvider {
     static var previews: some View {
-        CardView(card: Card(value:"Q", suit: "♥️"))
+        CardView(card: Card(id: 0, value: Card.Value.Q, suit: .hearts))
     }
 }

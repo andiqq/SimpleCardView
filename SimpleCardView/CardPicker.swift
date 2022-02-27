@@ -6,43 +6,33 @@
 //
 
 import Foundation
+import UIKit
 
 struct CardPicker
 {
+    
+    enum CardError: Error {
+        case suitOutOfRange
+        case valueOutOfRange
+    }
+    
     static func PickSomeCards(NumberOfCards: Int) -> [Card] {
         
         var pickedCards: [Card] = []
         
         for _ in 0..<NumberOfCards {
-            pickedCards.append(Card(value: RandomValue(), suit: RandomSuit()))
+            pickedCards.append(Card(id: pickedCards.count, value: RandomValue(), suit: RandomSuit()))
         }
         return pickedCards
     }
     
-    private static func RandomSuit() -> String {
-        let value = Int.random(in: 1...4)
-        
-        if value == 1 { return "♠️" }
-        if value == 2 { return "♥️" }
-        if value == 3 { return "♣️" }
-        return "♦️"
+    private static func RandomSuit() -> Card.Suit {
+        Card.Suit.allCases.randomElement()!
     }
     
-    private static func RandomValue() -> String {
-        let value = Int.random(in: 1...13)
-        
-        if (value == 1) { return "A" }
-        if (value == 11) { return " J" }
-        if (value == 12) { return "Q" }
-        if (value == 13) { return "K" }
-        
-        return String(value)
+    private static func RandomValue() -> Card.Value {
+        Card.Value.allCases.randomElement()!
     }
     
 }
 
-struct Card: Identifiable {
-    var id = UUID()
-    var value: String
-    var suit: String
-}
